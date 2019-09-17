@@ -8,6 +8,6 @@
     "ejs-locals": ">= 0.0.0",
     "passport": ">= 0.0.0",
     "passport-local": ">= 0.0.0",
-    "thirty-two": "0.0.x"
+    "thirty-two": "~1.0.2"
   }
 }
