@@ -1,6 +1,12 @@
 # Passport-TOTP
 
-[Passport](http://passportjs.org/) strategy for two-factor authentication using
+[![npm Package](https://img.shields.io/npm/v/@honzahommer/passport-totp.svg)](https://www.npmjs.org/package/@honzahommer/passport-totp)
+[![License](https://img.shields.io/npm/l/@honzahommer/passport-totp.svg)](https://github.com/honzahommer/passport-totp/blob/master/LICENSE)
+[![build status](https://img.shields.io/travis/honzahommer/passport-totp/master.svg)](http://travis-ci.org/honzahommer/passport-totp)
+[![downloads per month](http://img.shields.io/npm/dm/fs-mktemp.svg)](https://www.npmjs.org/package/@honzahommer/passport-totp)
+[![Greenkeeper badge](https://badges.greenkeeper.io/honzahommer/passport-totp.svg)](https://greenkeeper.io/)
+
+> [Passport](http://passportjs.org/) strategy for two-factor authentication using
 a [TOTP](http://tools.ietf.org/html/rfc6238) value.
 
 This module lets you authenticate using a TOTP value in your Node.js
@@ -17,7 +23,7 @@ policy, and outside the scope of both Passport and this strategy.
 
 ## Install
 
-    $ npm install passport-totp
+    $ npm install @honzahommer/passport-totp
 
 ## Usage
 
@@ -57,23 +63,22 @@ application:
 
 ## Examples
 
-For a complete, working example, refer to the [two-factor example](https://github.com/jaredhanson/passport-totp/tree/master/examples/two-factor).
+For a complete, working example, refer to the [two-factor example](https://github.com/honzahommer/passport-totp/tree/master/examples/two-factor).
 
 ## Tests
 
     $ npm install
     $ make test
 
-[![Build Status](https://secure.travis-ci.org/jaredhanson/passport-totp.png)](http://travis-ci.org/jaredhanson/passport-totp)
-
 ## Credits
 
   - [Jared Hanson](http://github.com/jaredhanson)
+  - [Honza Hommer](http://github.com/honzahommer)
+  - [Clark Wang](http://github.com/clarkorz)
+  - [Tomasz Sobczak](http://github.com/codename-)
 
 ## License
 
 [The MIT License](http://opensource.org/licenses/MIT)
 
-Copyright (c) 2013 Jared Hanson <[http://jaredhanson.net/](http://jaredhanson.net/)>
-
-
+Copyright (c) 2019 Jared Hanson <[http://jaredhanson.net/](http://jaredhanson.net/)>

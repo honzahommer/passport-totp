@@ -1,5 +1,5 @@
 {
-  "name": "passport-totp",
+  "name": "@honzahommer/passport-totp",
   "version": "0.0.2",
   "description": "TOTP authentication strategy for Passport.",
   "keywords": [
@@ -13,10 +13,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/jaredhanson/passport-totp.git"
+    "url": "git://github.com/honzahommer/passport-totp.git"
   },
   "bugs": {
-    "url": "http://github.com/jaredhanson/passport-totp/issues"
+    "url": "http://github.com/honzahommer/passport-totp/issues"
   },
   "author": {
     "name": "Jared Hanson",
