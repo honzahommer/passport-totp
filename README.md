@@ -3,7 +3,7 @@
 [![npm Package](https://img.shields.io/npm/v/@honzahommer/passport-totp.svg)](https://www.npmjs.org/package/@honzahommer/passport-totp)
 [![License](https://img.shields.io/npm/l/@honzahommer/passport-totp.svg)](https://github.com/honzahommer/passport-totp/blob/master/LICENSE)
 [![build status](https://img.shields.io/travis/honzahommer/passport-totp/master.svg)](http://travis-ci.org/honzahommer/passport-totp)
-[![downloads per month](http://img.shields.io/npm/dm/fs-mktemp.svg)](https://www.npmjs.org/package/@honzahommer/passport-totp)
+[![downloads per month](http://img.shields.io/npm/dm/@honzahommer/passport-totp.svg)](https://www.npmjs.org/package/@honzahommer/passport-totp)
 [![Greenkeeper badge](https://badges.greenkeeper.io/honzahommer/passport-totp.svg)](https://greenkeeper.io/)
 
 > [Passport](http://passportjs.org/) strategy for two-factor authentication using

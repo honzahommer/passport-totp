@@ -1,5 +1,18 @@
-language: "node_js"
+language: node_js
 node_js:
-  - "8"
-  - "10"
-  - "node"
+- node
+- 10
+- 8
+sudo: false
+cache:
+  directories:
+  - node_modules
+deploy:
+  node_js: 8
+  provider: npm
+  email: honza@hommer.cz
+  api_key:
+    secure: LnIIwUKDw7COlVOs2P4CvxCyHt7uZT+wDIG0c9j2jfolaGcjxwtkIwQQmL7lnRrNM+GRrPYuMi3l0bX24ORwlL1pIUWVPpybxKNpvLtm4FdanUhagZsptv5SJOEO0KwdENL9t3wzP44xqTJSpifscI2+GwioZa27tW+DsI7myKC7Qib5kKyXatVm9keLRvzgjgyu0xiVxjoedwuYKXbMTSn/RzxBIVVVJ+BEt2Yy7zli1gj78ZjKZwvQBtHDmPsDFS7FAju0nTreR51PCLUd0hFTJ5rsB/GP8zgEYeapDvdWgG5pKLAFYUH3lY62eEHu+63ZYsltjNbbDSpAjUjtKxWWTteGbOO62GhDvhiUJttAyB3FVI1lU2AHwO3kti4JpZKdjwt2ntIMQI7ctBmyIrPdevB0ObWHIbewHIfCE2P/dUfAcC3s0hxC3tloE/zBpRjJXdhkYmQuNbANsRgxw/qIYGuE65sE1ohwr24r8YESdOplVreAy34x50Uvrf0pYVSKOd91nv4KVHEYJltbMX5av8v3NLyph+Ao7icFE+4BCBU/HVhUrAhkPuwmW1SGiS+nVdG+c3+8hfVep7HqCeaePflMXJobSxU1QMhHT/Cd5PIBaUpOmFaoj1D5nYviqhTu3uYM9RTEfiOzI1C7mGUKZbpG2NxxTdIUHoHVo4Y=
+  on:
+    tags: true
+    repo: honzahommer/passport-totp

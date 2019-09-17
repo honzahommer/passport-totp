@@ -11,6 +11,9 @@
     "authn",
     "authentication"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/honzahommer/passport-totp.git"
@@ -42,10 +45,21 @@
   },
   "devDependencies": {
     "chai": "1.x.x",
+    "husky": "^3.0.5",
     "mocha": "^6.2.0"
   },
   "scripts": {
+    "release:patch": "npm version patch",
+    "release:minor": "npm version minor",
+    "release:major": "npm version major",
+    "publish": "git push origin --tags && npm run changelog && git push origin master",
+    "changelog": "github_changelog_generator && git add CHANGELOG.md && git commit -am \"Updating changelog\"",
     "test": "NODE_PATH=./lib node_modules/.bin/mocha --reporter spec --require test/bootstrap/node test/*.test.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm test"
+    }
   },
   "engines": {
     "node": ">= 0.4.0"
