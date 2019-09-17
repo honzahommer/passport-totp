@@ -1,6 +1,6 @@
 {
   "name": "@honzahommer/passport-totp",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "TOTP authentication strategy for Passport.",
   "keywords": [
     "passport",
@@ -11,6 +11,9 @@
     "authn",
     "authentication"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/honzahommer/passport-totp.git"
