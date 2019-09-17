@@ -1,0 +1,10 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "examples/two-factor/package.json",
+        "package.json"
+      ]
+    }
+  }
+}
