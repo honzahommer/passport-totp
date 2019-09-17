@@ -38,10 +38,10 @@
   "dependencies": {
     "notp": "2.0.x",
     "passport-strategy": "1.0.0",
-    "pkginfo": "0.2.x"
+    "pkginfo": "~0.4.1"
   },
   "devDependencies": {
-    "chai": "1.x.x",
+    "chai": "^4.2.0",
     "husky": "^3.0.5",
     "mocha": "^6.2.0"
   },
