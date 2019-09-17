@@ -2,8 +2,15 @@
   "groups": {
     "default": {
       "packages": [
-        "examples/two-factor/package.json",
         "package.json"
+      ]
+    },
+    "examples": {
+      "packages": [
+        "examples/two-factor/package.json"
+      ],
+      "ignore": [
+        "express"
       ]
     }
   }
