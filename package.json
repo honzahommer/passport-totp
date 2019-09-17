@@ -23,6 +23,11 @@
     "email": "jaredhanson@gmail.com",
     "url": "http://www.jaredhanson.net/"
   },
+  "contributors": [
+    "Honza Hommer <honza@hommer.cz>",
+    "Clark Wang <clark.wangs@gmail.com>",
+    "Tomasz Sobczak <codename-@users.noreply.github.com>"
+  ],
   "licenses": [
     {
       "type": "MIT",
