@@ -1,12 +1,18 @@
-var express = require('express')
+var base32 = require('thirty-two')
+  , bodyParser = require('body-parser')
+  , cookieParser = require('cookie-parser')
+  , express = require('express')
   , flash = require('connect-flash')
-  , loggedin = require('connect-ensure-login')
-  , base32 = require('thirty-two')
-  , utils = require('./utils')
-  , passport = require('passport')
   , LocalStrategy = require('passport-local').Strategy
-  , TotpStrategy = require('../..').Strategy
-  
+  , loggedin = require('connect-ensure-login')
+  , logger = require('morgan')
+  , passport = require('passport')
+  , methodOverride = require('method-override')
+  , serveStatic = require('serve-static')
+  , session = require('express-session');
+
+var utils = require('./utils')
+  , TotpStrategy = require('../..').Strategy;
 
 var users = [
     { id: 1, username: 'bob', password: 'secret', email: 'bob@example.com' }
@@ -95,23 +101,24 @@ passport.use(new TotpStrategy(
 var app = express();
 
 // configure Express
-app.configure(function() {
-  app.set('views', __dirname + '/views');
-  app.set('view engine', 'ejs');
-  app.engine('ejs', require('ejs-locals'));
-  app.use(express.static(__dirname + '/../../public'));
-  app.use(express.logger());
-  app.use(express.cookieParser());
-  app.use(express.bodyParser());
-  app.use(express.methodOverride());
-  app.use(express.session({ secret: 'keyboard cat' }));
-  app.use(flash());
-  // Initialize Passport!  Also use passport.session() middleware, to support
-  // persistent login sessions (recommended).
-  app.use(passport.initialize());
-  app.use(passport.session());
-  app.use(app.router);
-});
+app.set('views', __dirname + '/views');
+app.set('view engine', 'ejs');
+app.engine('ejs', require('ejs-locals'));
+app.use(serveStatic(__dirname + '/../../public'));
+app.use(logger('combined'));
+app.use(cookieParser());
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(methodOverride());
+app.use(session({
+  secret: 'keyboard cat',
+  resave: false,
+  saveUninitialized: true
+}));
+app.use(flash());
+// Initialize Passport!  Also use passport.session() middleware, to support
+// persistent login sessions (recommended).
+app.use(passport.initialize());
+app.use(passport.session());
 
 
 app.get('/', function(req, res){
@@ -194,6 +201,7 @@ app.post('/login-otp',
   });
 
 app.get('/logout', function(req, res){
+  delete req.session.secondFactor;
   req.logout();
   res.redirect('/');
 });
