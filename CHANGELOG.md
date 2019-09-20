@@ -1,5 +1,17 @@
 # Change Log
 
+## [v0.0.4](https://github.com/honzahommer/passport-totp/tree/v0.0.4) (2019-09-20)
+[Full Changelog](https://github.com/honzahommer/passport-totp/compare/v0.0.3...v0.0.4)
+
+**Implemented enhancements:**
+
+- Upgrade example app [\#3](https://github.com/honzahommer/passport-totp/issues/3)
+
+**Merged pull requests:**
+
+- Update dependencies for default 🌴 [\#2](https://github.com/honzahommer/passport-totp/pull/2) ([greenkeeper[bot]](https://github.com/apps/greenkeeper))
+- Update dependencies to enable Greenkeeper 🌴 [\#1](https://github.com/honzahommer/passport-totp/pull/1) ([greenkeeper[bot]](https://github.com/apps/greenkeeper))
+
 ## [v0.0.3](https://github.com/honzahommer/passport-totp/tree/v0.0.3) (2019-09-17)
 [Full Changelog](https://github.com/honzahommer/passport-totp/compare/v0.0.2...v0.0.3)
 
