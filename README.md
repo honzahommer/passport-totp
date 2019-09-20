@@ -63,10 +63,10 @@ application:
 
 ## Examples
 
-For a complete, working example, refer to the [two-factor example](https://github.com/honzahommer/passport-totp/tree/master/examples/two-factor).
+For a complete, working example, refer to the [two-factor example](https://github.com/honzahommer/passport-totp-example).
 
-    $ git clone https://github.com/honzahommer/passport-totp.git
-    $ cd passport-totp/examples/two-factor
+    $ git clone https://github.com/honzahommer/passport-totp-example.git
+    $ cd passport-totp-example
     $ npm install
     $ npm start
 
